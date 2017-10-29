@@ -2,6 +2,7 @@
   "name": "@kaosat-dev/dummy-repo",
   "version": "0.0.0-development",
   "description": "",
+  "private":false,
   "main": "index.js",
   "scripts": {
     "test": "tape test.js",
