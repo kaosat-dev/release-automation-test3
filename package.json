@@ -1,6 +1,6 @@
 {
   "name": "@kaosat-dev/dummy-repo",
-  "version": "0.0.0-development",
+  "version": "0.0.1",
   "description": "",
   "private":false,
   "main": "index.js",
