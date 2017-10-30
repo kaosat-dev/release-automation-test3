@@ -7,10 +7,21 @@ notifications:
 node_js:
   - '8'
   - '6'
-before_script:
-  - npm prune
-after_success:
-  - npm run semantic-release
+os:
+  - linux
+  - osx
+env:
+  - BUILD_LEADER_ID=7
+jobs:
+  include:
+    - stage: npm release
+    node_js: "8"
+    os: "linux"
+    script: echo "Deploying to npm ..."
+    before_script:
+      - npm prune
+    after_success:
+      - npm run semantic-release
 branches:
   except:
     - /^v\d+\.\d+\.\d+$/
