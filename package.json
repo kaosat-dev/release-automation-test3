@@ -7,7 +7,7 @@
   "scripts": {
     "test": "tape test.js",
     "build-browser": "mkdir -p dist && browserify index.js -o dist/browser.js",
-    "prepublish": "build-browser",
+    "prepublish": "npm run build-browser",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "author": "Mark 'kaosat-dev' Moissette",
