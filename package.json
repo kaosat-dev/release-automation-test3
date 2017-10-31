@@ -2,10 +2,12 @@
   "name": "@kaosat-dev/dummy-repo",
   "version": "0.0.1",
   "description": "",
-  "private":false,
+  "private": false,
   "main": "index.js",
   "scripts": {
     "test": "tape test.js",
+    "build-browser": "mkdir -p dist && browserify index.js -o dist/browser.js",
+    "prepublish": "build-browser",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "author": "Mark 'kaosat-dev' Moissette",
@@ -17,5 +19,8 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/kaosat-dev/release-automation-test3.git"
+  },
+  "dependencies": {
+    "browserify": "^14.5.0"
   }
 }
